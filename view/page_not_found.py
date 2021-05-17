@@ -24,7 +24,7 @@ def page_not_found(pathname):
                                   html.P(f"{pathname}",
                                          className="text-warning",
                                          style={'font-size': 'large'}),
-                                  html.P("Mas fique com esse gif para não perder a viagem:",
+                                  html.P("Mas fique com este gif para não perder a viagem:",
                                          className="text-muted",
                                          style={'font-size': 'large'}
                                          ),
