@@ -43,6 +43,13 @@ def stringency_index(data):
     return px.line(data, x='date', y='stringency_index', color='location')
 
 
+def gdp(data):
+    df_hdi = data.drop_duplicates(subset='location')
+    df_hdi = df_hdi.dropna(subset=['gdp_per_capita'])
+
+    return px.bar(df_hdi, x='location', y='gdp_per_capita', color='location')
+
+
 # Human development index from UNDP
 def hdi(data):
     df_hdi = data.drop_duplicates(subset='location')
