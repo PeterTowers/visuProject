@@ -5,7 +5,7 @@ import dash_bootstrap_components as dbc
 
 navbar = dbc.Nav(
     [
-        dbc.NavItem(dbc.NavLink("Dashboard visual da COVID-19", href="#", style={'font-size': 'large'})),
+        dbc.NavItem(dbc.NavLink("Dashboard visual da COVID-19", href="/", style={'font-size': 'large'})),
         dbc.DropdownMenu(
             [dbc.DropdownMenuItem("Técnicas utilizadas"),
              dbc.DropdownMenuItem("Agrupamento por UMAP"),
@@ -13,9 +13,9 @@ navbar = dbc.Nav(
             label="Técnicas de agrupamento",
             nav=True,
         ),
-        dbc.NavItem(dbc.NavLink("América do Sul", href="#")),
-        dbc.NavItem(dbc.NavLink("Países nódicos", href="#")),
-        dbc.NavItem(dbc.NavLink("Países desenvolvidos", href="#")),
+        dbc.NavItem(dbc.NavLink("América do Sul", href="/america-sul")),
+        dbc.NavItem(dbc.NavLink("Países nódicos", href="/paises-nordicos")),
+        dbc.NavItem(dbc.NavLink("Países desenvolvidos", href="/paises-desenvolvidos")),
         dbc.NavItem(dbc.NavLink("Faça seu cluster", href="#"))
     ], className="navbar bg-secondary", style={'font-size': 'medium'}
 )
