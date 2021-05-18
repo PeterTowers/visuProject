@@ -11,7 +11,7 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
 # Local imports
-from view import index, page_not_found, south_america, nordicos
+from view import index, page_not_found, south_america, nordic_countries
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css',
                         dbc.themes.DARKLY]
@@ -33,7 +33,7 @@ def render_page_content(pathname):
     elif pathname == "/america-sul":
         return south_america.sa_page()
     elif pathname == "/paises-nordicos":
-        return nordicos.nordic_page()
+        return nordic_countries.nordic_page()
 
     # If the user tries to reach a different page, return a 404 message
     else:
