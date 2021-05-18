@@ -12,7 +12,6 @@ def sa_page():
         children=[views.navbar, views.landing_text,
                   html.H1("Dados agrupados dos países da América do Sul", className="text-center"),
                   html.Div(
-
                       dbc.Container(children=[
                           dbc.Row(children=[
                               dbc.Col(

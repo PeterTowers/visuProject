@@ -87,8 +87,8 @@ def nordic_page():
                               ),
                               dbc.Col(
                                   html.Div(children=[
-                                      html.H2('''IDH dos países da América do Sul -
-                                           o IDH mede a qualidade de vida em um país'''),
+                                      html.H2('''IDH dos países nórdicos -
+                                       o IDH mede a qualidade de vida em um país'''),
                                       dcc.Graph(
                                           id='hd-index',
                                           figure=visu.hdi(countries.nordic())
