@@ -10,12 +10,8 @@ import dash_bootstrap_components as dbc
 
 from dash.dependencies import Input, Output
 
-import plotly.graph_objects as go
-import plotly.express as px
-import pandas as pd
-
 # Local imports
-from view import index, page_not_found
+from view import index, page_not_found, south_america, nordic_countries
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css',
                         dbc.themes.DARKLY]
@@ -34,10 +30,10 @@ app.layout = html.Div([
 def render_page_content(pathname):
     if pathname == "/":
         return index.index_page()
-    elif pathname == "/page-1":
-        return html.P("This is the content of page 1. Yay!")
-    elif pathname == "/page-2":
-        return html.P("Oh cool, this is page 2!")
+    elif pathname == "/america-sul":
+        return south_america.sa_page()
+    elif pathname == "/paises-nordicos":
+        return nordic_countries.nordic_page()
 
     # If the user tries to reach a different page, return a 404 message
     else:
