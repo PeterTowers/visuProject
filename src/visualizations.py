@@ -73,7 +73,7 @@ def umap_kmeans_revenue(data):
 
     umap_2d = UMAP(n_components=2, init='random', random_state=0)
     proj_2d = umap_2d.fit_transform(features)
-    kmeans = KMeans(n_clusters = 7, init="k-means++", max_iter = 500, n_init = 10, random_state = 123)
+    kmeans = KMeans(n_clusters=7, init="k-means++", max_iter=500, n_init=10, random_state=123)
     identified_clusters = kmeans.fit_predict(proj_2d)
 
     data['Cluster'] = identified_clusters
@@ -89,7 +89,7 @@ def umap_kmeans_sickness(data):
 
     umap_2d = UMAP(n_components=2, init='random', random_state=0)
     proj_2d = umap_2d.fit_transform(features)
-    kmeans = KMeans(n_clusters = 7, init="k-means++", max_iter = 500, n_init = 10, random_state = 123)
+    kmeans = KMeans(n_clusters=7, init="k-means++", max_iter=500, n_init=10, random_state=123)
     identified_clusters = kmeans.fit_predict(proj_2d)
 
     data['Cluster'] = identified_clusters
