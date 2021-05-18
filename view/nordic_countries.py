@@ -10,7 +10,7 @@ import src.visualizations as visu
 def nordic_page():
     page = html.Div(
         children=[views.navbar, views.landing_text,
-                  html.H1('''Dados agrupados dos países da Nódicos -
+                  html.H1('''Dados agrupados dos países nórdicos -
                    Dinamarca, Finlândia, Islândia, Noruega e Suécia''',
                           className="text-center"),
                   html.Div(
