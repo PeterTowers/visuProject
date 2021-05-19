@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 from umap import UMAP
 from sklearn.cluster import KMeans
-
+from sklearn.manifold import TSNE
 
 # Total covid cases
 def total_cases(data):
@@ -68,27 +68,20 @@ def gini(data):
     return px.bar(df_gini, x='location', y='gini', color='location')
 
 
-def umap_kmeans_revenue(data):
-    features = data.loc[:, 'gdp_per_capita':]
+# Dimensionality reduction
+def dim_red_kmeans(data, cluster, technique):
+    if cluster == 'renda':
+        features = data.loc[:, 'gdp_per_capita':]
+    else:
+        features = data.loc[:, 'cardiovasc_death_rate':]
 
-    umap_2d = UMAP(n_components=2, init='random', random_state=0)
-    proj_2d = umap_2d.fit_transform(features)
-    kmeans = KMeans(n_clusters=7, init="k-means++", max_iter=500, n_init=10, random_state=123)
-    identified_clusters = kmeans.fit_predict(proj_2d)
-
-    data['Cluster'] = identified_clusters
-
-    return px.scatter(
-        proj_2d, x=0, y=1,
-        color=data.Cluster, labels={'color': 'Cluster'},
-        hover_name=data.location
-    )
-
-def umap_kmeans_sickness(data):
-    features = data.loc[:, 'cardiovasc_death_rate':]
-
-    umap_2d = UMAP(n_components=2, init='random', random_state=0)
-    proj_2d = umap_2d.fit_transform(features)
+    if technique == 'umap':
+        umap_2d = UMAP(n_components=2, init='random', random_state=0)
+        proj_2d = umap_2d.fit_transform(features)
+    else:
+        tsne = TSNE(n_components=2, random_state=0)
+        proj_2d = tsne.fit_transform(features)
+    
     kmeans = KMeans(n_clusters=7, init="k-means++", max_iter=500, n_init=10, random_state=123)
     identified_clusters = kmeans.fit_predict(proj_2d)
 

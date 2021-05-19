@@ -34,8 +34,14 @@ def render_page_content(pathname):
         return south_america.sa_page()
     elif pathname == "/paises-nordicos":
         return nordic_countries.nordic_page()
-    elif pathname == "/reducao-dim":
+    elif pathname == "/reducao-dim-renda":
         return dim_reduction.dim_red_page()
+    elif pathname == "/reducao-dim-comorb":
+        return dim_reduction.dim_red_page_sick()
+    elif pathname == "/reducao-dim-renda-tsne":
+        return dim_reduction.dim_red_page_tsne()
+    elif pathname == "/reducao-dim-comorb-tsne":
+        return dim_reduction.dim_red_page_tsne_sick()
 
     # If the user tries to reach a different page, return a 404 message
     else:
