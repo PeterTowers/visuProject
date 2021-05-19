@@ -17,3 +17,10 @@ def nordic():
 # Countries from the south american continent
 def south_america():
     return df[df['continent'].isin(['South America'])]
+
+
+# Countries in the same cluster as Brazil on dimensional reduction
+def dim_reduct():
+    return df[df['iso_code'].isin(["ALB", "BIH", "BRA", "COL", "DZA", "ECU", "IDN",
+                                   "LBN", "LKA", "MNG", "PER", "SRB", "TUN", "ZAF"])]
+
