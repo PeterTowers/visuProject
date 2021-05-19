@@ -7,16 +7,18 @@ navbar = dbc.Nav(
     [
         dbc.NavItem(dbc.NavLink("Dashboard visual da COVID-19", href="/", style={'font-size': 'large'})),
         dbc.DropdownMenu(
-            [dbc.DropdownMenuItem("Técnicas utilizadas"),
-             dbc.DropdownMenuItem("Agrupamento por UMAP"),
-             dbc.DropdownMenuItem("Agrupamento por K-means")],
+            [dbc.DropdownMenuItem("Técnicas utilizadas", style={'font-size': 'medium'}),
+             dbc.DropdownMenuItem("Redução de dimensionalidade",
+                                  href="/reducao-dim",
+                                  style={'font-size': 'medium'}),
+             dbc.DropdownMenuItem("Agrupamento por K-means", style={'font-size': 'medium'})],
             label="Técnicas de agrupamento",
             nav=True,
         ),
         dbc.NavItem(dbc.NavLink("América do Sul", href="/america-sul")),
         dbc.NavItem(dbc.NavLink("Países nódicos", href="/paises-nordicos")),
         dbc.NavItem(dbc.NavLink("Países desenvolvidos", href="/paises-desenvolvidos")),
-        dbc.NavItem(dbc.NavLink("Faça seu cluster", href="#"))
+        dbc.NavItem(dbc.NavLink("Faça seu cluster", href="/easter-egg"))
     ], className="navbar bg-secondary", style={'font-size': 'medium'}
 )
 
