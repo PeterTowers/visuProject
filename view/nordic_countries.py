@@ -13,7 +13,6 @@ def nordic_page():
                   html.H1('''Dados agrupados dos países nórdicos -
                    Dinamarca, Finlândia, Islândia, Noruega e Suécia''',
                           className="text-center"),
-                  html.Div(
                       dbc.Container(children=[
                           dbc.Row(children=[
                               dbc.Col(
@@ -108,7 +107,7 @@ def nordic_page():
                                   ), xs=11, sm=11, md=6, lg=6
                               ), justify="center", className="g-5"
                           )],
-                          fluid=True),
-                  )]
+                          fluid=True)
+                  ]
     )
     return page

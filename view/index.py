@@ -11,7 +11,6 @@ def index_page():
     page = page = html.Div(
         children=[views.navbar, views.landing_text,
                   html.H1("Dados gerais globais", className="text-center"),
-                  html.Div(
                       dbc.Container(children=[
                           dbc.Row(children=[
                               dbc.Col(
@@ -106,7 +105,7 @@ def index_page():
                                   ), xs=11, sm=11, md=6, lg=6
                               ), justify="center", className="g-5"
                           )],
-                          fluid=True),
-                  )]
+                          fluid=True)
+                  ]
     )
     return page
