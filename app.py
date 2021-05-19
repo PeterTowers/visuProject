@@ -11,7 +11,7 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 
 # Local imports
-from view import index, page_not_found, south_america, nordic_countries, dim_reduction
+from view import index, page_not_found, south_america, nordic_countries, dim_reduction, dev_countries
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css',
                         dbc.themes.DARKLY]
@@ -34,6 +34,8 @@ def render_page_content(pathname):
         return south_america.sa_page()
     elif pathname == "/paises-nordicos":
         return nordic_countries.nordic_page()
+    elif pathname == "/paises-desenvolvidos":
+        return dev_countries.developed_page()
     elif pathname == "/reducao-dim":
         return dim_reduction.dim_red_page()
 
