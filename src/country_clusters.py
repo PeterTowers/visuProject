@@ -25,6 +25,27 @@ def dim_reduct():
                                    "LBN", "LKA", "MNG", "PER", "SRB", "TUN", "ZAF"])]
 
 
+# Countries in the same cluster as Brazil on dimensional reduction
+def dim_reduct_sickness():
+    return df[df['iso_code'].isin(["QAT", "BRB", "BRA", "SLV", "TUR", "GRC", "MLT",
+                                   "SVN", "FIN", "URY", "MEX", "DEU", "USA", "BHR",
+                                   "AUT", "CYP"])]
+
+
+# Countries in the same cluster as Brazil on TSNE-renda
+def tsne_revenue():
+    return df[df['iso_code'].isin(["LBN", "MKD", "SRB", "DZA", "BRA", "CHN", "DOM",
+                                   "IRQ", "THA", "CRI", "BWA", "MNE", "GAB", "BLR",
+                                   "MEX", "BGR", "ARG"])]
+
+
+# Countries in the same cluster as Brazil on TSNE-comorbidades
+def tsne_sickness():
+    return df[df['iso_code'].isin(["GRC", "TUR", "CUB", "SLV", "BRA", "BRB", "QAT",
+                                   "ETH", "CPV", "ARG", "LKA", "PRY", "ZAF", "BRN",
+                                   "JAM", "MMR"])]
+
+
 # General countries picked up from personal interest
 def developed():
     return df[df['iso_code'].isin(["AUS", "BEL", "DEU", "ESP", "FRA", "GBR", "ITA", "JPN", "KOR", "NZL", "USA", "SWE"])]
