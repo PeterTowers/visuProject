@@ -44,6 +44,10 @@ def render_page_content(pathname):
         return dim_reduction.dim_red_page_tsne()
     elif pathname == "/reducao-dim-comorb-tsne":
         return dim_reduction.dim_red_page_tsne_sick()
+    elif pathname == '/reducao-dim-renda-pca':
+        return dim_reduction.dim_red_page_pca()
+    elif pathname == '/reducao-dim-comorb-pca':
+        return dim_reduction.dim_red_page_pca_sick()
 
     # If the user tries to reach a different page, return a 404 message
     else:

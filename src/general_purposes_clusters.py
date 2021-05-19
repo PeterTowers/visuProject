@@ -2,7 +2,6 @@ import pandas as pd
 
 df = pd.read_csv('data/owid_ginada.csv')
 
-
 def revenue():
     df_renda = df[['date', 'location', 'continent', 'gdp_per_capita',
                    'life_expectancy', 'hospital_beds_per_thousand',

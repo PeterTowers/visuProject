@@ -3,6 +3,7 @@ import plotly.express as px
 from umap import UMAP
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
 
 # Total covid cases
 def total_cases(data):
@@ -78,6 +79,9 @@ def dim_red_kmeans(data, cluster, technique):
     if technique == 'umap':
         umap_2d = UMAP(n_components=2, init='random', random_state=0)
         proj_2d = umap_2d.fit_transform(features)
+    elif technique == 'pca':
+        pca = PCA(n_components=2, random_state=0)
+        proj_2d = pca.fit(features).transform(features)
     else:
         tsne = TSNE(n_components=2, random_state=0)
         proj_2d = tsne.fit_transform(features)

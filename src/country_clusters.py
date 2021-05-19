@@ -44,6 +44,24 @@ def tsne_sickness():
     return df[df['iso_code'].isin(["GRC", "TUR", "CUB", "SLV", "BRA", "BRB", "QAT",
                                    "ETH", "CPV", "ARG", "LKA", "PRY", "ZAF", "BRN",
                                    "JAM", "MMR"])]
+                                
+
+# Countries in the same cluster as Brazil on PCA-renda
+def pca_revenue():
+    return df[df['iso_code'].isin(['ALB', 'DZA', 'ARG', 'BLR', 'BIH',
+                                   'BWA', 'BRA', 'BGR', 'CHN', 'COL',
+                                   'CRI', 'DOM', 'ECU', 'GAB', 'GEO',
+                                   'IDN', 'IRQ', 'LBN', 'MEX', 'MNG',
+                                   'MNE', 'MKD', 'PER', 'SRB', 'ZAF',
+                                   'LKA', 'THA', 'TUN'])]
+
+
+# Countries in the same cluster as Brazil on PCA-comorbidades
+def pca_sickness():
+    return df[df['iso_code'].isin(['ARG', 'BHR', 'BRB', 'BRA', 'BRN', 'CPV',
+                                   'CUB', 'SLV', 'ETH', 'FIN', 'DEU', 'GRC',
+                                   'JAM', 'MLT', 'MEX', 'MMR', 'PRY', 'QAT',
+                                   'SVN', 'ZAF', 'LKA', 'TUR', 'UGA', 'USA', 'URY'])]
 
 
 # General countries picked up from personal interest
