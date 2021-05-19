@@ -24,3 +24,7 @@ def dim_reduct():
     return df[df['iso_code'].isin(["ALB", "BIH", "BRA", "COL", "DZA", "ECU", "IDN",
                                    "LBN", "LKA", "MNG", "PER", "SRB", "TUN", "ZAF"])]
 
+
+# General countries picked up from personal interest
+def developed():
+    return df[df['iso_code'].isin(["AUS", "BEL", "DEU", "ESP", "FRA", "GBR", "ITA", "JPN", "KOR", "NZL", "USA", "SWE"])]
