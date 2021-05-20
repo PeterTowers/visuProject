@@ -42,7 +42,7 @@ landing_text = html.Section(
             html.Div(
                 children=[
                     html.H1("Dashboard visual da COVID-19", className="display-3"),
-                    html.P("Texto para falar coisas.",
+                    html.P("Dados epidemiológicos e socioeconômicos.",
                            className="text-muted",
                            style={'font-size': 'large'})
                 ],
